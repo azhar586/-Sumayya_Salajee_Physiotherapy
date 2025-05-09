@@ -51,6 +51,10 @@ h2 {
 main {
     padding: 30px 15px;
     text-align: center;
+    min-height: 100vh; /* Ensure the content fills the full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Info & Contact Cards */
@@ -255,6 +259,11 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 10px;
+    }
+
+    main {
+        padding: 15px;
+        min-height: 100vh; /* Ensure the main container takes up full height */
     }
 
     .info, .contact {
