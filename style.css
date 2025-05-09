@@ -1,0 +1,255 @@
+/* Color Palette Based on Cards */
+:root {
+    --cream: #fdf2cf;
+    --navy: #0d1b2a;
+    --text-dark: #000;
+    --text-light: #fdf2cf;
+    --accent: #d4c490;
+}
+
+/* Font imports */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--cream);
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    background-color: var(--navy);
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px;
+    border-bottom: 4px solid var(--accent);
+}
+
+.logo {
+    max-width: 100px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 10px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4em;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    color: var(--text-light);
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.5em; /* Increased font size for larger screens */
+    margin-top: 0;
+    color: var(--text-light);
+}
+
+main {
+    padding: 30px 15px;
+    text-align: center;
+}
+
+/* Info & Contact Cards */
+.info, .contact {
+    background-color: #fff;
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    max-width: 600px;
+    transition: transform 0.3s ease;
+}
+
+.info:hover, .contact:hover {
+    transform: scale(1.02);
+}
+
+/* Typography */
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6em;
+    color: var(--navy);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.05em;
+    margin: 10px 0;
+    color: #333;
+    font-weight: bold; /* Makes all paragraphs bold */
+}
+
+strong {
+    color: var(--navy);
+}
+
+/* Additional Logo Section */
+.additional-logo {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.logo-small {
+    width: 80px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.logo-small:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: var(--navy);
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    border-top: 3px solid var(--accent);
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--navy);
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 3px solid var(--accent);
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding-bottom: 5px;
+    transition: border-bottom 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    border-bottom: 2px solid var(--text-light);
+}
+
+/* Styling for the "BSC Physiotherapy, UKZN" Card */
+.info {
+    background: linear-gradient(135deg, var(--cream), var(--accent));
+    color: var(--navy);
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.info p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: var(--navy);
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.info {
+    border: 2px solid var(--navy);
+}
+
+/* Styling for the "Contact Information" Card */
+.contact {
+    background: linear-gradient(135deg, var(--cream), var(--accent));
+    color: var(--navy);
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Typography for the card content */
+.contact h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6em;
+    color: var(--navy);
+}
+
+/* Updated font size for "Physiotherapist" */
+.contact h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
+    color: var(--navy);
+    margin: 10px 0;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .info, .contact {
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    .logo, .logo-small {
+        width: 60px;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 0.8em;
+    }
+}
