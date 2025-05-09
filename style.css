@@ -43,7 +43,7 @@ h1 {
 h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-size: 1.5em; /* Increased font size for larger screens */
+    font-size: 1.5em;
     margin-top: 0;
     color: var(--text-light);
 }
@@ -55,17 +55,21 @@ main {
 
 /* Info & Contact Cards */
 .info, .contact {
-    background-color: #fff;
+    background: linear-gradient(135deg, var(--cream), var(--accent)); /* Gradient background */
+    color: var(--navy);
     padding: 25px;
     margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    border: 2px solid var(--navy); /* Added black border */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-width: 600px;
-    transition: transform 0.3s ease;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .info:hover, .contact:hover {
-    transform: scale(1.02);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Subtle shadow on hover */
 }
 
 /* Typography */
@@ -84,7 +88,7 @@ p {
     font-size: 1.05em;
     margin: 10px 0;
     color: #333;
-    font-weight: bold; /* Makes all paragraphs bold */
+    font-weight: bold;
 }
 
 strong {
@@ -156,11 +160,12 @@ footer {
 
 /* Styling for the "BSC Physiotherapy, UKZN" Card */
 .info {
-    background: linear-gradient(135deg, var(--cream), var(--accent));
+    background: linear-gradient(135deg, var(--cream), var(--accent)); /* Restored gradient */
     color: var(--navy);
     padding: 25px;
     margin: 20px auto;
     border-radius: 12px;
+    border: 2px solid var(--navy); /* Added black border */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     max-width: 600px;
     text-align: center;
@@ -181,17 +186,20 @@ footer {
     font-weight: bold;
 }
 
-.info {
-    border: 2px solid var(--navy);
+.info strong {
+    color: var(--navy);
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
 /* Styling for the "Contact Information" Card */
 .contact {
-    background: linear-gradient(135deg, var(--cream), var(--accent));
+    background: linear-gradient(135deg, var(--cream), var(--accent)); /* Restored gradient */
     color: var(--navy);
     padding: 25px;
     margin: 20px auto;
     border-radius: 12px;
+    border: 2px solid var(--navy); /* Added black border */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     max-width: 600px;
     text-align: center;
@@ -203,20 +211,33 @@ footer {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* Typography for the card content */
 .contact h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.6em;
     color: var(--navy);
 }
 
-/* Updated font size for "Physiotherapist" */
 .contact h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 1.5em;
     color: var(--navy);
     margin: 10px 0;
+}
+
+.contact p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: var(--navy);
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.contact strong {
+    color: var(--navy);
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
 /* Media Queries for Mobile Responsiveness */
@@ -239,9 +260,14 @@ footer {
         gap: 10px;
     }
 
+    main {
+        padding: 15px;
+    }
+
     .info, .contact {
         padding: 15px;
         margin: 10px auto;
+        max-width: 90%;
     }
 
     .logo, .logo-small {
@@ -253,4 +279,3 @@ footer {
         font-size: 0.8em;
     }
 }
-
