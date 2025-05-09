@@ -269,7 +269,7 @@ footer {
     .info, .contact {
         padding: 15px;
         margin: 10px auto;
-        max-width: 90%; /* Ensure the card fits well on mobile */
+        
     }
 
     .logo, .logo-small {
