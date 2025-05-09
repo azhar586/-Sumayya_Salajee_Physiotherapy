@@ -161,25 +161,8 @@ footer {
     border-bottom: 2px solid var(--text-light);
 }
 
-/* Styling for the "BSC Physiotherapy, UKZN" Card */
-.info {
-    background: linear-gradient(135deg, var(--cream), var(--accent));
-    color: var(--navy);
-    padding: 25px;
-    margin: 20px auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    max-width: 600px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.info:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-}
-
-.info p {
+/* Styling for Info & Contact Cards */
+.info p, .contact p {
     font-family: 'Roboto', sans-serif;
     font-size: 1.1em;
     line-height: 1.8;
@@ -188,30 +171,13 @@ footer {
     font-weight: bold;
 }
 
-.info strong {
+.info strong, .contact strong {
     color: var(--navy);
     font-weight: bold;
     font-size: 1.2em;
 }
 
-/* Styling for the "Contact Information" Card */
-.contact {
-    background: linear-gradient(135deg, var(--cream), var(--accent));
-    color: var(--navy);
-    padding: 25px;
-    margin: 20px auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    max-width: 600px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-}
-
+/* Contact Card Titles */
 .contact h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.6em;
@@ -226,58 +192,90 @@ footer {
     margin: 10px 0;
 }
 
-.contact p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.1em;
-    line-height: 1.8;
-    color: var(--navy);
-    margin: 10px 0;
-    font-weight: bold;
-}
+/* ============ MEDIA QUERIES ============ */
 
-.contact strong {
-    color: var(--navy);
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-/* Media Queries for Mobile Responsiveness */
+/* Tablet & Medium Screens */
 @media (max-width: 768px) {
     header {
         padding: 15px;
     }
 
     h1 {
-        font-size: 1.8em;
+        font-size: 2em;
     }
 
     h2 {
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
 
     .navbar ul {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
+    }
+
+    .navbar li {
+        margin: 8px 0;
     }
 
     main {
-        padding: 15px;
-        min-height: 100vh;
+        padding: 20px;
     }
 
     .info, .contact {
-        padding: 15px;
-        margin: 10px auto;
+        padding: 20px;
+        margin: 15px auto;
         max-width: 90%;
     }
 
     .logo, .logo-small {
-        width: 60px;
+        width: 70px;
     }
 
     footer {
         padding: 15px;
-        font-size: 0.8em;
+        font-size: 0.85em;
     }
 }
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .logo, .logo-small {
+        width: 55px;
+    }
+
+    .info, .contact {
+        padding: 15px;
+        max-width: 95%;
+    }
+
+    .additional-logo {
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .navbar a {
+        font-size: 1em;
+    }
+
+    footer {
+        font-size: 0.75em;
+    }
+}
+
