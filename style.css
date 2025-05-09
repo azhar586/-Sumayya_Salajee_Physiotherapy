@@ -154,46 +154,15 @@ footer {
     border-bottom: 2px solid var(--text-light);
 }
 
-/* Styling for the "BSC Physiotherapy, UKZN" Card */
-.info {
-    background: linear-gradient(135deg, var(--cream), var(--accent));
-    color: var(--navy);
-    padding: 25px;
-    margin: 20px auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    max-width: 600px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.info:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-}
-
-.info p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.1em;
-    line-height: 1.8;
-    color: var(--navy);
-    margin: 10px 0;
-    font-weight: bold;
-}
-
-.info {
-    border: 2px solid var(--navy);
-}
-
 /* Styling for the "Contact Information" Card */
 .contact {
     background: linear-gradient(135deg, var(--cream), var(--accent));
     color: var(--navy);
-    padding: 25px;
-    margin: 20px auto;
+    padding: 20px;
+    margin: 10px auto;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    max-width: 600px;
+    max-width: 500px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -203,14 +172,12 @@ footer {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* Typography for the card content */
 .contact h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.6em;
     color: var(--navy);
 }
 
-/* Updated font size for "Physiotherapist" */
 .contact h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -219,10 +186,29 @@ footer {
     margin: 10px 0;
 }
 
-/* Media Queries for Mobile Responsiveness */
+.contact p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: var(--navy);
+    margin: 10px 0;
+    font-weight: bold; /* Makes paragraphs bold */
+}
+
+.contact strong {
+    color: var(--navy);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.contact {
+    border: 2px solid var(--navy);
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
     header {
-        padding: 15px;
+        padding: 10px;
     }
 
     h1 {
@@ -230,7 +216,7 @@ footer {
     }
 
     h2 {
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
 
     .navbar ul {
@@ -239,9 +225,10 @@ footer {
         gap: 10px;
     }
 
-    .info, .contact {
+    .contact {
         padding: 15px;
         margin: 10px auto;
+        max-width: 90%; /* Ensure the card fits well on mobile */
     }
 
     .logo, .logo-small {
