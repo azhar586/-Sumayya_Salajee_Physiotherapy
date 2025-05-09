@@ -55,17 +55,20 @@ main {
 
 /* Info & Contact Cards */
 .info, .contact {
-    background-color: #fff;
+    background: linear-gradient(135deg, var(--cream), var(--accent)); /* Gradient background */
+    color: var(--navy);
     padding: 25px;
     margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     max-width: 600px;
-    transition: transform 0.3s ease;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .info:hover, .contact:hover {
-    transform: scale(1.02);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 /* Typography */
@@ -154,15 +157,48 @@ footer {
     border-bottom: 2px solid var(--text-light);
 }
 
-/* Styling for the "Contact Information" Card */
-.contact {
-    background: linear-gradient(135deg, var(--cream), var(--accent));
+/* Styling for the "BSC Physiotherapy, UKZN" Card */
+.info {
+    background: linear-gradient(135deg, var(--cream), var(--accent)); /* Restored gradient */
     color: var(--navy);
-    padding: 20px;
-    margin: 10px auto;
+    padding: 25px;
+    margin: 20px auto;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    max-width: 500px;
+    max-width: 600px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.info p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: var(--navy);
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.info strong {
+    color: var(--navy);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Styling for the "Contact Information" Card */
+.contact {
+    background: linear-gradient(135deg, var(--cream), var(--accent)); /* Gradient background */
+    color: var(--navy);
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -192,7 +228,7 @@ footer {
     line-height: 1.8;
     color: var(--navy);
     margin: 10px 0;
-    font-weight: bold; /* Makes paragraphs bold */
+    font-weight: bold;
 }
 
 .contact strong {
@@ -201,14 +237,10 @@ footer {
     font-size: 1.2em;
 }
 
-.contact {
-    border: 2px solid var(--navy);
-}
-
-/* Mobile Responsiveness */
+/* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
     header {
-        padding: 10px;
+        padding: 15px;
     }
 
     h1 {
@@ -216,7 +248,7 @@ footer {
     }
 
     h2 {
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
 
     .navbar ul {
@@ -225,7 +257,7 @@ footer {
         gap: 10px;
     }
 
-    .contact {
+    .info, .contact {
         padding: 15px;
         margin: 10px auto;
         max-width: 90%; /* Ensure the card fits well on mobile */
