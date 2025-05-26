@@ -241,80 +241,67 @@ footer {
 }
 
 /* Media Queries for Mobile Responsiveness */
-@media (max-width: 768px) {
-    html, body {
-        min-height: 100vh;
-        padding: 0;
-        margin: 0;
-        width: 100%;
-    }
+/* ======================
+   Mobile Responsiveness
+   ====================== */
 
-    body {
-        width: 100vw;
-        overflow-x: hidden;
-    }
+@media (max-width: 600px) {
+  /* ----- General Adjustments ----- */
+  body {
+    font-size: 15px; /* Slightly smaller text for mobile */
+  }
 
-    header {
-        padding: 10px 0;
-    }
+  /* ----- Header ----- */
+  header {
+    padding: 15px 10px; /* Reduce padding */
+  }
+  
+  .logo {
+    max-width: 80px; /* Smaller logo */
+  }
 
-    .logo, .logo-small {
-        width: 48px;
-        max-width: 48px;
-        margin: 8px auto;
-    }
+  h1 {
+    font-size: 1.8em; /* Smaller heading */
+  }
 
-    h1 {
-        font-size: 1.3em;
-        margin: 8px 0 2px 0;
-    }
+  h2 {
+    font-size: 1.2em;
+  }
 
-    h2 {
-        font-size: 1em;
-        margin: 0 0 12px 0;
-    }
+  /* ----- Navigation ----- */
+  .navbar li {
+    display: block; /* Stack nav items vertically */
+    margin: 10px 0;
+  }
 
-    .navbar ul {
-        flex-direction: column;
-        gap: 8px;
-    }
+  .navbar a {
+    font-size: 1em; /* Smaller font */
+    padding: 5px 0; /* Tighter padding */
+  }
 
-    main {
-        padding: 0;
-        min-height: calc(100vh - 160px); /* Adjust according to your header/footer height */
-        width: 100vw;
-        box-sizing: border-box;
-    }
+  /* ----- Cards (Info & Contact) ----- */
+  .info, .contact {
+    padding: 20px 15px; /* Less padding */
+    margin: 15px 10px; /* Smaller margin */
+    max-width: 100%; /* Full width */
+  }
 
-    .info, .contact {
-        width: 100vw;
-        max-width: 100vw;
-        margin: 10px 0;
-        padding: 12px 8px;
-        border-radius: 0;
-        box-sizing: border-box;
-        font-size: 1em;
-    }
+  h3 {
+    font-size: 1.4em; /* Smaller subheading */
+  }
 
-    .contact h3, .info h3 {
-        font-size: 1.15em;
-        margin-bottom: 8px;
-    }
+  /* ----- Additional Logos ----- */
+  .additional-logo {
+    gap: 10px; /* Reduce spacing between logos */
+  }
 
-    .contact p, .info p {
-        font-size: 1em;
-        margin: 6px 0;
-    }
+  .logo-small {
+    width: 60px; /* Smaller logos */
+  }
 
-    .additional-logo {
-        margin-top: 12px;
-        gap: 8px;
-    }
-
-    footer {
-        padding: 10px 0;
-        font-size: 0.8em;
-        width: 100vw;
-        box-sizing: border-box;
-    }
+  /* ----- Footer ----- */
+  footer {
+    padding: 15px 10px;
+    font-size: 0.8em; /* Smaller text */
+  }
 }
